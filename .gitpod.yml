@@ -1,0 +1,12 @@
+image: gitpod/flutter:2.8.1
+
+# Instalar dependências
+before_script:
+  - flutter config --enable-web
+  - flutter pub get
+
+# Iniciar o servidor de desenvolvimento do Flutter
+tasks:
+  - name: Iniciar o servidor de desenvolvimento
+    command: flutter run --web-port 8080
+    openMode: "tab"
